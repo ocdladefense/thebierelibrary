@@ -10,7 +10,3 @@
 	path = dev_modules/@ocdla/view
 	url = https://github.com/ocdladefense/node-view
 	branch = for-template
-[submodule "dev_modules/@ocdla/ors"]
-	path = dev_modules/@ocdla/ors
-	url = https://github.com/ocdladefense/node-ors.git
-	branch = parser-update
