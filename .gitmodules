@@ -5,11 +5,11 @@
 [submodule "dev_modules/@ocdla/global-components"]
 	path = dev_modules/@ocdla/global-components
 	url = https://github.com/ocdladefense/global-components
-	branch = for-template
+	branch = main
 [submodule "dev_modules/@ocdla/view"]
 	path = dev_modules/@ocdla/view
 	url = https://github.com/ocdladefense/node-view
-	branch = development
+	branch = for-template
 [submodule "dev_modules/@ocdla/ors"]
 	path = dev_modules/@ocdla/ors
 	url = https://github.com/ocdladefense/node-ors.git

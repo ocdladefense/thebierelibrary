@@ -14,7 +14,7 @@ module.exports = env => {
             // init_head: path.resolve(__dirname, "src/js/custom-elements.js")
         },
         snapshot: {
-            managedPaths: [],
+            managedPaths: ["/node_modules"],
             unmanagedPaths: ["/dev_modules"]
         },
         watchOptions: {
@@ -26,6 +26,7 @@ module.exports = env => {
         },
         output: {
             path: path.resolve(__dirname, "dist"),
+            publicPath: "/",
             filename: "[name].bundle.js",
             assetModuleFilename: "images/[name][ext]",
             clean: true
@@ -44,11 +45,12 @@ module.exports = env => {
             rules: [
                 {
                     test: /\.(js|jsx)$/,
+                    // exclude: /(node_modules)/,
                     use: {
                         loader: "babel-loader",
                         options: {
                             presets: [
-                                ["@babel/preset-env", { modules: false, useBuiltIns: false }],
+                                ["@babel/preset-env", { modules: false }],
                                 [
                                     "@babel/preset-react",
                                     {
@@ -67,6 +69,10 @@ module.exports = env => {
                     }
                 },
                 {
+                    test: /\.ts$/,
+                    use: "ts-loader"
+                },
+                {
                     test: /\.css$/i,
                     use: ["style-loader", "css-loader", "postcss-loader"]
                 },
@@ -81,18 +87,12 @@ module.exports = env => {
                 {
                     test: /\.xml$/i,
                     type: "asset/source"
-                },
-                {
-                    test: /\.html$/i,
-                    exclude: [/src\/index\.html/],
-                    type: "asset/source"
                 }
             ]
         },
         plugins: [
             new webpack.DefinePlugin({
-                USE_MOCK: JSON.stringify(env.USE_MOCK || false), // Can we even pass booleans from the CLI?
-                MODULE_PATH: JSON.stringify(env.MODULE_PATH || "")
+                USE_MOCK: JSON.stringify(env.USE_MOCK || false) // Can we even pass booleans from the CLI?
             }),
             new HtmlWebpackPlugin({
                 template: path.resolve(__dirname, "./src/index.html"),
@@ -109,7 +109,8 @@ module.exports = env => {
                     "src/.nojekyll",
                     "src/manifest.json",
                     "src/sw.js",
-                    "src/robots.txt"
+                    "src/robots.txt",
+                    "src/.htaccess"
                 ]
             })
         ]

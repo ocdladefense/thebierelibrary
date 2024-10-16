@@ -21,9 +21,9 @@
   "license": "ISC",
   "dependencies": {
     "@local/openai": "file:./dev_modules/@local/openai",
-    "@ocdla/global-components": "file:./dev_modules/@ocdla/global-components",
+    "@ocdla/global-components": "~0.1.1",
     "@ocdla/lib-http": "^2.1.0",
-    "@ocdla/view": "~3.0.0",
+    "@ocdla/view": "~2.5.0",
     "@ocdla/lib-routing": "^1.1.0",
     "autoprefixer": "^10.4.19",
     "dotenv": "^16.4.5",
