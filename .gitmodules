@@ -10,3 +10,6 @@
 	path = dev_modules/@ocdla/view
 	url = https://github.com/ocdladefense/node-view
 	branch = for-template
+[submodule "dev_modules/@ocdla/lib-routing"]
+	path = dev_modules/@ocdla/lib-routing
+	url = https://github.com/ocdladefense/node-lib-routing

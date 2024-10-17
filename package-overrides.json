@@ -1,23 +1,7 @@
 {
     "dependencies": {
         "@local/openai": "file:./dev_modules/@local/openai",
-        "@local/lod": "file:./dev_modules/@local/lod",
-        "@local/publish": "file:./dev_modules/@local/publish",
-        "@local/references": "file:./dev_modules/@local/references",
         "@ocdla/global-components": "file:./dev_modules/@ocdla/global-components",
-        "@ocdla/lib-http": "file:./dev_modules/@ocdla/lib-http",
-        "@ocdla/view": "file:./dev_modules/@ocdla/view",
-        "@ocdladefense/ors": "file:./dev_modules/@ocdla/ors",
         "@ocdla/lib-routing": "file:./dev_modules/@ocdla/lib-routing"
-    },
-  "scripts": {
-    "build": "webpack --config webpack.config.js --env USE_MOCK --env MODULE_PATH=@local/lod",
-    "watch": "webpack serve --open --env USE_MOCK --env MODULE_PATH=@local/lod",
-    "build:ocdla:publish": "webpack --config webpack.config.js --env USE_MOCK --env MODULE_PATH=@local/publish",
-    "build:ocdla:ors": "webpack --config webpack.config.js --env USE_MOCK --env MODULE_PATH=@local/references",
-    "build:ocdla:openai": "webpack --config webpack.config.js --env USE_MOCK --env MODULE_PATH=@local/openai",
-    "watch:ocdla:publish": "webpack serve --open --env USE_MOCK --env MODULE_PATH=@local/publish",
-    "watch:ocdla:ors": "webpack serve --open --env USE_MOCK --env MODULE_PATH=@local/references",
-    "watch:ocdla:openai": "webpack serve --open --env USE_MOCK --env MODULE_PATH=@local/openai"
-  }
+    }
 }

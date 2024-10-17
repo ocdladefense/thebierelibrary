@@ -1,6 +1,7 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
 import { vNode, View } from "@ocdla/view";
-import Header from "./components/Header";
+// import Header from "./components/Header";
+import Navigation from "@ocdla/global-components/src/navigation/Navigation";
 import Footer from "./components/Footer";
 import routes from "./data/routes.js";
 import Router from "@ocdla/lib-routing/src/Router.js";
@@ -31,11 +32,42 @@ console.log(Page, HeaderTwo);
 let location = router.getLocation();
 
 export default function App() {
-
+    let items = [
+        {
+            url: "/",
+            label: "home"
+        },
+        {
+            url: "/events",
+            label: "events"
+        },
+        {
+            url: "/eat",
+            label: "food",
+            hidden: true
+        },
+        {
+            url: "/drink",
+            label: "drink",
+            hidden: false
+        },
+        {
+            url: "/about",
+            label: "about",
+            hidden: true
+        },
+        {
+            url: "/contact",
+            label: "contact us",
+            hidden: true
+        }
+    ];
 
     return (
         <>
-            <Header />
+            <header class="w-full mb-0 pb-1 p-[10px] sticky top-0 bg-wb-black z-50">
+                <Navigation routes={items} />
+            </header>
             {typeof HeaderTwo === "function" ? <HeaderTwo /> : <></>}
             <main class={`grow overflow-x-hidden font-default-paragraph ${location}`}>
                 <Page />
