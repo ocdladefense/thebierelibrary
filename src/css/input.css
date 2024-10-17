@@ -107,7 +107,7 @@ section div p {
 }
 
 .overlay-logo {
-  background-image: url('/src/images/logos/Waldbusser\ Ciderworks\ -\ Logo\ White.png');
+  background-image: url('/src/images/logos/logo-white.png');
   position: absolute;
   top: 40%;
   left: 50%;
@@ -144,6 +144,3 @@ ul.social img {
 }
 
 
-.hamburgler {
-    margin-left: 60px;
-}

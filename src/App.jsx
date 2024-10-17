@@ -1,10 +1,11 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
 import { vNode, View } from "@ocdla/view";
 // import Header from "./components/Header";
-import Navigation from "@ocdla/global-components/src/navigation/Navigation";
+import Header from "@ocdla/global-components/src/Header";
 import Footer from "./components/Footer";
 import routes from "./data/routes.js";
 import Router from "@ocdla/lib-routing/src/Router.js";
+import logo from "./images/logos/logo-header.png";
 
 let router = new Router();
 router.setBasePath("/");
@@ -65,9 +66,7 @@ export default function App() {
 
     return (
         <>
-            <header class="w-full mb-0 pb-1 p-[10px] sticky top-0 bg-wb-black z-50">
-                <Navigation routes={items} />
-            </header>
+            <Header navItems={items} logo={logo} logoWidth="40" logoHeight="40" />
             {typeof HeaderTwo === "function" ? <HeaderTwo /> : <></>}
             <main class={`grow overflow-x-hidden font-default-paragraph ${location}`}>
                 <Page />

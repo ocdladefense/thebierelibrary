@@ -3,12 +3,12 @@ import { vNode, View } from "@ocdla/view";
 
 export default function HomeHeader() {
 
-    return (
+    return (  
         <>
             <div class="hero-image">
-                <img src="..\images\mockup\banner-clear.png" class="size-full brightness-50" />
+                <img src="../images/banner.jpg" class="size-full brightness-50" />
                 <div class="overlay-logo"></div>
-                <div class="overlay-slow-cider"></div>
+
             </div>
 
 
