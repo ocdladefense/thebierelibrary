@@ -1,6 +1,6 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
 import { vNode, View } from "@ocdla/view";
-import ContentPanel from "../ContentPanel";
+import ContentPanel from "@ocdla/global-components/src/ContentPanel";
 
 export default function About() {
     return (

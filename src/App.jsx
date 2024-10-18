@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import routes from "./data/routes.js";
 import Router from "@ocdla/lib-routing/src/Router.js";
 import logo from "./images/logos/logo-header.png";
+import menus from "./data/menus.js";
 
 let router = new Router();
 router.setBasePath("/");
@@ -33,37 +34,10 @@ console.log(Page, HeaderTwo);
 let location = router.getLocation();
 
 export default function App() {
-    let items = [
-        {
-            url: "/",
-            label: "home"
-        },
-        {
-            url: "/events",
-            label: "events"
-        },
-        {
-            url: "/eat",
-            label: "food",
-            hidden: true
-        },
-        {
-            url: "/drink",
-            label: "drink",
-            hidden: false
-        },
-        {
-            url: "/about",
-            label: "about",
-            hidden: true
-        },
-        {
-            url: "/contact",
-            label: "contact us",
-            hidden: true
-        }
-    ];
 
+    let menuId = "main";
+    let items = menus[menuId];
+    
     return (
         <>
             <Header navItems={items} logo={logo} logoWidth="40" logoHeight="40" />

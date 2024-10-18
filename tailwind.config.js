@@ -23,6 +23,8 @@ module.exports = {
             "default-paragraph": ["Tienne"],
             "default-heading": ["Open Sans", ...defaultTheme.fontFamily.sans],
             smoothy: ["Smoothy Cursive", ...defaultTheme.fontFamily.sans],
+            bitter: ["Bitter", ...defaultTheme.fontFamily.sans],
+            lato: ["Lato", ...defaultTheme.fontFamily.sans],
             marketing: ["Marketing", ...defaultTheme.fontFamily.sans]
         },
         colors: {
@@ -44,7 +46,10 @@ module.exports = {
             "plush":"rgb(43,61,69)",
             "bonfire":"rgb(40,48,33)",
             "sunshine":"rgb(247,224,170)",
-            "sunshine-dark":"rgb(158,50,48)"
+            "default-background":"rgb(247,224,170)",
+            "sunshine-dark":"rgb(158,50,48)",
+            "dark-text": "rgb(38,13,20)",
+            "crater-lake-green": "rgb(49,76,66)"
         }
     }
   },

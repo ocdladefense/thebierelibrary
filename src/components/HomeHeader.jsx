@@ -13,9 +13,13 @@ export default function HomeHeader() {
 
 
             <section class="callout bg-wb-black tablet:mb-16">
-                <p class="subpixel-antialiased container text-2xl mx-auto tablet-portrait:max-w-[90%] laptop:max-w-[80%] tablet:mx-auto px-8 py-20 font-default-paragraph">
-                    <span class="text-stone-300">Welcome to <strong>Waldbusser Ciderworks</strong>, where the art of traditional cider making meets modern, transparent practices. Nestled in the heart of Oregon, we specialize in crafting exceptional ciders through a meticulous slow fermentation process that captures the essence of the apples we use.</span>
-                </p>
+                <div style="font-family:Bitter;font-weight:600;" class="text-center subpixel-antialiased container text-2xl mx-auto tablet-portrait:max-w-[90%] laptop:max-w-[80%] tablet:mx-auto px-8 py-20 font-default-paragraph">
+                
+                    <h1 class="text-stone-300 text-4xl">The Bière Library<br />Four-year anniversary!</h1>
+                    <h2 class="text-stone-300 text-2xl">2020&mdash;2024</h2>
+                
+                    <span style="font-weight: 400;" class="text-stone-300">Welcome to <strong>The Biere Library!</strong> The Bière Library is a craft beer bar and restaurant serving Corvallis, Oregon. Inspired by the beer and cuisine of Belgium, The Bière Library explores the relationship between beer and food in an environment reminiscent of a comfortable library.</span>
+                </div>
             </section>
         </>
     );

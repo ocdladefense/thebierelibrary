@@ -77,7 +77,7 @@ module.exports = env => {
                     use: ["style-loader", "css-loader", "postcss-loader"]
                 },
                 {
-                    test: /\.(svg|eot|ttf|woff|woff2)$/i,
+                    test: /\.(svg|eot|ttf|woff|woff2|webp)$/i,
                     type: "asset/resource"
                 },
                 {
